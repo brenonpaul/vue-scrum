@@ -57,14 +57,14 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-color: powderblue;
+  background-color: #ccc;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 main {
   width: 60vw;
-  background-color: azure;
+  background-color: rgb(35, 149, 149);
   height: 70vh;
   height: auto;
   display: flex;
@@ -75,5 +75,6 @@ main {
 }
 h1 {
   text-align: center;
+  color: rgb(4, 89, 89);;
 }
 </style>

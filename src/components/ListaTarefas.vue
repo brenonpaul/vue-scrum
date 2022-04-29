@@ -60,9 +60,10 @@ article {
     flex-direction: column;
     align-items: center;
     height: auto;
+    margin: 4%;
 }
 section {
-    background-color: rgb(209, 246, 115);
+    background-color: powderblue;
     width: 100%;
     min-height: 50vh;
     height: auto;
@@ -76,6 +77,9 @@ section {
 }
 h3 {
     font-size: 120%;
+}
+h2 {
+    color: white;
 }
 #concluir {
     border: 1px solid #5fa786;
