@@ -13,12 +13,21 @@ export default {
             default: [],
         }
     },
+    data() {
+        return {
+            novaTarefa: ""
+        }
+    },
     methods: {
         concluirTarefa(id) {
             this.$emit("concluirTarefa", id);
         },
         refazerTarefa(id) {
             this.$emit("refazerTarefa", id);
+        },
+        adicionarTarefa() {
+            this.$emit("adicionarTarefa", this.novaTarefa);
+            this.novaTarefa = "";
         }
     } 
 };
@@ -30,6 +39,10 @@ export default {
             <div v-for="(tarefa, index) in tarefas" :key="index" class="box">
                 <h3> {{ tarefa.descricao }} </h3>
                 <button @click="concluirTarefa(index)" class="btn first" id="concluir">Concluir</button>
+            </div>
+            <div class="box">
+                <input v-model="novaTarefa" type="text" placeholder="Adicionar nova tarefa">
+                <button @click="adicionarTarefa" class="btn first" id="concluir">adicionar</button>
             </div>
         </section>
         <section v-else>

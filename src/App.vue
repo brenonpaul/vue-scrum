@@ -34,6 +34,11 @@ export default {
     refazerTarefa(id) {
       this.tarefas.push({descricao: this.realizadas[id].descricao});
       this.realizadas.splice([id], 1);
+    },
+    adicionarTarefa(desc) {
+      if(desc === '')
+        return;
+      this.tarefas.push({descricao: desc});
     }
   } 
 };
@@ -41,7 +46,7 @@ export default {
 <template>
   <h1>{{ titulo }}</h1> 
   <main>
-    <ListaTarefas title="To Do" :tarefas="tarefas" @concluirTarefa="concluirTarefa" />
+    <ListaTarefas title="To Do" :tarefas="tarefas" @concluirTarefa="concluirTarefa" @adicionarTarefa="adicionarTarefa" />
     <ListaTarefas title="Done" :realizadas="realizadas" @refazerTarefa="refazerTarefa" />
   </main>
 </template>
